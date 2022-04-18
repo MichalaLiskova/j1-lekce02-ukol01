@@ -8,7 +8,7 @@ public class HlavniProgram {
         Turtle zofka;          //Turtle je třída objektů- je to nadefinované, co může dělat, a jméno želvy jsou ty objekty, které jsem si vyvolala
 
         zofka = new Turtle();
-        zofka.setSpeed(200);
+        zofka.setSpeed(50);
         //přesun žofky dolů, aby se vešli obrázky  teď se kreslí prasátko
         zofka.penUp();
 
@@ -19,30 +19,57 @@ public class HlavniProgram {
         zofka.turnRight(90);
         zofka.penDown();
 
-          nakresliPrasatko(zofka);
+        nakresliPrasatko(zofka);
 
         //přesun nahoru na sluníčko a kolečko
         zofka.penUp();
         zofka.turnLeft(60);
-        zofka.move(300);
+        zofka.move(350);
+        zofka.turnLeft(90);
+        zofka.move(100);
+        zofka.turnRight(90);
         zofka.penDown();
 
         //kreslení kolečka
         //nakresliKolecko(zofka);
 
-         nakresliSlunicko(zofka);
+        nakresliSlunicko(zofka);
 
-         //přesun na domečky
-         zofka.penUp();
-         zofka.turnLeft(180);
-         zofka.move(200);
-         zofka.turnRight(90);
-         zofka.move(300);
-         zofka.penDown();
+        //přesun na domečky
+        zofka.penUp();
+        zofka.turnLeft(180);
+        zofka.move(150);
+        zofka.turnRight(90);
+        zofka.move(140);
+        zofka.turnLeft(180);
+        zofka.penDown();
 
-         //kreslení domečků
+        //kreslení domečků
+        for (int i = 0; i < 5; i++) {
+            nakresliDomecek(zofka);
+        }
+        //přesun na domeček samotný
+        zofka.penUp();
+        zofka.turnRight(90);
+        zofka.move(190);
+        zofka.turnLeft(90);
+        zofka.turnRight(180);
+        zofka.move(120);
+        zofka.turnRight(180);
+        zofka.penDown();
 
+        //domeček
+        nakresliDomecek(zofka);
 
+        //přesun na poslední domeček
+        zofka.penUp();
+        zofka.turnRight(180);
+        zofka.move(600);
+        zofka.turnRight(180);
+        zofka.penDown();
+
+        //last house
+        nakresliDomecek(zofka);
 
 
 
@@ -136,22 +163,49 @@ public class HlavniProgram {
             // paprsek
 
         }
-            for (int j = 0; j < 24; j++) {
-                zelva.turnRight(15);
-                zelva.move(10);
 
-                zelva.turnLeft(90);
-                zelva.move(30);
-                zelva.turnLeft(180);
-                zelva.move(30);
-                zelva.turnLeft(90);
+        for (int j = 0; j < 24; j++) {
+            zelva.turnRight(15);
+            zelva.move(10);
 
-                if (zelva.isPenDrawing()) {          //střídání cyklů, aby se ob jeden paprsek nenakreslil a vznilko jich 12 a ne stejně jako je dílců kolečka
-                    zelva.penUp();
-                } else {
-                    zelva.penDown();
-                }
+            zelva.turnLeft(90);
+            zelva.move(30);
+            zelva.turnLeft(180);
+            zelva.move(30);
+            zelva.turnLeft(90);
+
+            if (zelva.isPenDrawing()) {          //střídání cyklů, aby se ob jeden paprsek nenakreslil a vznilko jich 12 a ne stejně jako je dílců kolečka
+                zelva.penUp();
+            } else {
+                zelva.penDown();
             }
         }
-
     }
+
+    private void nakresliDomecek(Turtle zelva) {
+
+        zelva.move(60);
+        zelva.turnRight(90);
+        zelva.move(100);
+        zelva.turnRight(90);
+        zelva.move(60);
+        zelva.turnRight(90);
+        zelva.move(100);
+
+        //přesun na přední střechu
+        //zelva.turnLeft(180);
+        //zelva.move(100);
+
+        //střecha
+        zelva.turnRight(30);
+        zelva.move(60);
+        zelva.turnRight(120);
+        zelva.move(60);
+
+        //přesun na další domeček
+        zelva.penUp();
+        zelva.turnLeft(60);
+        zelva.move(60);
+        zelva.penDown();
+    }
+}
