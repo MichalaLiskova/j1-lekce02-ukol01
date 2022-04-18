@@ -72,10 +72,94 @@ public class HlavniProgram {
         nakresliDomecek(zofka);
 
 
+        //přesun na jméno
+         zofka.penUp();
+         zofka.turnRight(180);
+         zofka.move(120);
+         zofka.turnLeft(90);
+         zofka.move(230);
+         zofka.turnLeft(180);
 
+
+         //písmeno M
+        pismenoM(zofka);
+
+        //písmeno I
+        pismenoI(zofka);
+
+        //písmeno S
+        pismenoS(zofka);
+
+        //pismeno A
+        pismenoA(zofka);
 
         // nakresliOsmisten(zofka);                 //vyvolám metodu a během toho ji píši    je v poznámce, protože není na finálním obrázku
 
+    }
+
+    private void pismenoA(Turtle zofka) {
+        zofka.penDown();
+        zofka.move(60);
+        zofka.turnRight(90);
+        zofka.move(40);
+        zofka.turnRight(90);
+        zofka.move(60);
+        zofka.turnLeft(180);
+        zofka.move(30);
+        zofka.turnLeft(90);
+        zofka.move(40);
+        zofka.penUp();
+        zofka.turnLeft(90);
+        zofka.move(30);
+        zofka.turnLeft(90);
+        zofka.move(60);
+        zofka.turnLeft(90);
+    }
+
+    private void pismenoS(Turtle zofka) {
+        zofka.turnRight(90);
+        zofka.penDown();
+        zofka.move(40);
+        zofka.turnLeft(90);
+        zofka.move(30);
+        zofka.turnLeft(90);
+        zofka.move(40);
+        zofka.turnRight(90);
+        zofka.move(30);
+        zofka.turnRight(90);
+        zofka.move(40);
+        zofka.penUp();
+        zofka.turnRight(90);
+        zofka.move(60);
+        zofka.turnLeft(90);
+        zofka.move(20);
+        zofka.turnLeft(90);
+    }
+
+    private void pismenoI(Turtle zofka) {
+        zofka.penDown();
+        zofka.move(60);
+        zofka.penUp();
+        zofka.turnLeft(180);
+        zofka.move(60);
+        zofka.turnLeft(90);
+        zofka.move(20);
+        zofka.turnLeft(90);
+    }
+
+    private void pismenoM(Turtle zofka) {
+        zofka.penDown();
+        zofka.move(60);
+        zofka.turnRight(120);
+        zofka.move(30);
+        zofka.turnLeft(60);
+        zofka.move(30);
+        zofka.turnRight(120);
+        zofka.move(60);
+        zofka.penUp();
+        zofka.turnLeft(90);
+        zofka.move(20);
+        zofka.turnLeft(90);
     }
 
     private void nakresliPrasatko(Turtle zelva) {
