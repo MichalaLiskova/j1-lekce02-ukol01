@@ -6,13 +6,12 @@ public class HlavniProgram {
 
     public void main(String[] args) {
         Turtle zofka;          //Turtle je třída objektů- je to nadefinované, co může dělat, a jméno želvy jsou ty objekty, které jsem si vyvolala
-        Turtle pepa;
+
         zofka = new Turtle();
-        pepa = new Turtle();
-        pepa.move(200);
+
 
         nakresliPrasatko(zofka);
-        nakresliPrasatko(pepa);
+
 
 
     }
